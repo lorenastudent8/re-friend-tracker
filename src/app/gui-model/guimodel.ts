@@ -224,12 +224,12 @@ export class GuiModel {
                     ]
                 },
                 {
-                            "id": "activitispage",
+                            "id": "addactivitiesform",
                             "title": "Activity",
                             "url": "/friend/:friendKey/activity",
                             "formFieldList": [
                         {
-                            "id":   "activity",
+                            "id":   "activities",
                             "type": "autocomplete",
                             "name": "Activity",
                             "url": "/activity",
@@ -388,6 +388,53 @@ export class GuiModel {
                             "form": {
                                 "form": "LocationForm"
                             }
+                        },
+                        {
+                    }
+                ]
+            },
+            {
+                        "id": "friendActivitiesPage",
+                        "elementList": [
+                            {
+                                "type": "backbutton"
+                            },
+                            {
+                                "type": "newButton",
+                                "name": "AddActivity",
+                                "icon": "fa-plus",
+                                "color": "green",
+                                "form": {
+                                    "form": "AddActivityForm"
+                                }
+                            },
+                            {
+                                "type": "list",
+                                "icon": "fa-list",
+                                "color": "blue",
+                                "search": true,
+                                "url": "/friend/:friendKey/activity",
+                                "form": {
+                                    "form": "AddActivityForm"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "activityFriendsPage",
+                        "elementList": [
+                            {
+                                "type": "backbutton"
+                            },
+                            {
+                                "type": "list",
+                                "icon": "fa-user",
+                                "color": "blue",
+                                "search": true,
+                                "url": "/activity/:activityKey/friend",
+                                "form": {
+                                    "form": "FriendForm"
+                                }
                         },
                     ]
                 },
